@@ -97,6 +97,7 @@ nav ul li a:hover::after{
      transform: scale(1.15);
 }
 .about-col-2{
+    margin-top: 30px;
     flex-basis: 60%;
 }
 .sub-title {
@@ -112,7 +113,7 @@ nav ul li a:hover::after{
   .sub-title .underline {
     margin-bottom: 15px;
     position: absolute;
-    bottom: -8px;
+    bottom: -12px;
     left: 0;
     height: 5px;
     width: 0;
@@ -164,14 +165,12 @@ display: block;
 }
 
 /*                  My services              */
-#services{
-    padding: 30px 0;
-}
+
 .services-list{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
     grid-gap: 40px;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 .services-list div{
     background: #262626;
@@ -211,79 +210,101 @@ display: block;
 }
 .work-list{
     display: grid;
+    /* height: 40px; */
     grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
     grid-gap:40px ;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 .work{
     border-radius: 15px ;
     position: relative;
-    overflow: hidden;
-}
-.work img{
     border-radius: 15px;
+    width: 100%;
+    overflow: hidden;
+    aspect-ratio: 4/4.5;
+}
+.work img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     display: block;
     transition: transform 0.5s;
 }
-.layer{
-    width: 100%;
-    height: 0;
-    background: linear-gradient(rgba(0,0,0,0.6),#af1e1e);
-    border-radius: 15px;
+.layer {
     position: absolute;
+    top: 0;
     left: 0;
-    bottom: 0;
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), #1307ec);
+    border-radius: 15px;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    /* margin-right: 20px; */
-    padding: 0 40px;
+    padding: 0 20px;
     text-align: center;
     font-size: 14px;
-    transition: height(0.5);
+    transition: height 0.5s ease;
+    
 }
 .layer h3{
+    margin-top: 20px;
     font-weight: 500;
     margin-bottom: 20px;
-    /* margin-right: 20px; */
-    justify-content: center;
-    justify-content: center;
+    margin-right: 20px;
 }
 .layer a{
     margin-top: 20px;
-    margin-right: 50px;
-    color: #ff004f;
+    /* margin-left: 10px; */
+    color: #ff0000;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 30px;
     line-height: 60px;
-    background: #fff;
-    width: 60px;
-    height: 60px;
-    border-radius: 15px;
-    text-align: center;
+
 }
 .work:hover img{
     transform: scale(1.2);
 }
 .work:hover .layer{
     height: 100%;
-    transition: 0.7s;
+    transition: 0.5s;
 }
 .btn{
-    display: block;
-    margin: 50px auto;
-    width: fit-content;
-    border: 1px solid #ff004f;
-    padding: 14px 50px ;
-    border-radius: 10px;
-    text-decoration: none;
-    color: #fff;
-    transition: 0.8s;
+    color: white;
+margin-top: 10px;
+font-size: 18px; 
+display: inline-block; 
+padding: 0.6em 1.2em; 
+border: 3px solid #FF0072; 
+border-radius: 10px; 
+position: relative; 
+color: #FF0072; 
+text-decoration: none; 
+transition: 0.8s;
+z-index: 1;
 }
-.btn:hover{
-    background: #ff004f;
+.btn:before { 
+transition: 0.8s; 
+position: absolute; 
+top: 0; 
+left: 50%; 
+right: 50%; 
+bottom: 0; 
+opacity: 0; 
+content:""; 
+background-color:#FF0072; 
+z-index: -1; 
+}
+.btn:hover, btn:focus {
+color: white; 
+}
+.btn:hover:before, .btn:focus:before { 
+transition: 0.8; 
+left: 0; 
+right: 0; 
+opacity: 1;
 }
 
 /*        contact       */
@@ -396,6 +417,9 @@ nav .fas{
         z-index: 2;
         transition: right 0.6s;
     }
+     .work-list {
+    grid-template-columns: 1fr;
+  }
     nav ul li{
         display: block;
         margin: 25px;
