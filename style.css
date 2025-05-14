@@ -105,7 +105,7 @@ nav ul li a:hover::after{
     display: inline-block;
     font-size: 40px;
     font-weight: bold;
-    color: #fb0000;
+    color: red;
     cursor: pointer;
 
   }
@@ -139,7 +139,7 @@ nav ul li a:hover::after{
     content: '';
     width: 0;
     height: 3px;
-    background: #ff004f;
+    background: red;
     position: absolute;
     left: 0;
     bottom: -8px;
@@ -170,7 +170,7 @@ display: block;
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
     grid-gap: 40px;
-    margin-top: 20px;
+    margin-top: 40px;
 }
 .services-list div{
     background: #262626;
@@ -236,7 +236,7 @@ display: block;
     left: 0;
     width: 100%;
     height: 0%;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), #1307ec);
+    background: linear-gradient(rgba(0, 0, 0, 0.1), red);
     border-radius: 15px;
     overflow: hidden;
     display: flex;
@@ -258,7 +258,7 @@ display: block;
 .layer a{
     margin-top: 20px;
     /* margin-left: 10px; */
-    color: #ff0000;
+    color: white;
     text-decoration: none;
     font-size: 30px;
     line-height: 60px;
@@ -277,10 +277,10 @@ margin-top: 10px;
 font-size: 18px; 
 display: inline-block; 
 padding: 0.6em 1.2em; 
-border: 3px solid #FF0072; 
+border: 3px solid red; 
 border-radius: 10px; 
 position: relative; 
-color: #FF0072; 
+color: red; 
 text-decoration: none; 
 transition: 0.8s;
 z-index: 1;
@@ -294,7 +294,7 @@ right: 50%;
 bottom: 0; 
 opacity: 0; 
 content:""; 
-background-color:#FF0072; 
+background-color:red; 
 z-index: -1; 
 }
 .btn:hover, btn:focus {
@@ -319,7 +319,7 @@ flex-basis: 35%;
     margin-top: 30px;
 }
 .contact-left p i{
-    color: #ff004f;
+    color: red;
     margin-right: 15px ;
     font-size: 25px;
 }
@@ -332,7 +332,7 @@ flex-basis: 35%;
     transition: 0.5s;
 }
 .social-icons a:hover{
-    color: #ff004f;
+    color: red;
     transform: translateY(-15px);
 }
 
@@ -362,9 +362,13 @@ form input, form textarea{
     background: #262626;
     padding: 15px;
     margin: 15px 0;
-    color: #fff;
+    color: white;
     font-size: 18px;
     border-radius: 15px;
+}
+.contact-right .form:hover{
+    transition: 0.4s ease-in-out;
+    box-shadow:  5px 3px 3px red ;
 }
 .copyright{
     width: 100%;
@@ -375,7 +379,7 @@ form input, form textarea{
     margin-top: 20px;
 }
 .copyright i{
-    color: #ff004f;
+    color: red;
 }
 
 
