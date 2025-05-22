@@ -198,62 +198,6 @@
               <p>Copyright @ Siddharth. Made by <i class="fa-solid fa-s"></i>iddharth <i class="fa-solid fa-t"></i>iwari</p>
             </div>
           </div>
-    <script>
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
-
-        function opentab(tabname) {
-            for(tablink of tablinks) {
-                tablink.classList.remove("active-link");
-            }
-            for(tabcontent of tabcontents) {
-                tabcontent.classList.remove("active-tab");
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
-        }
-
-    </script>
-
-    <!--          sidemenu      -->
-
-    <script>
-      var sidemenu = document.getElementById("sidemenu")
-
-      function openmenu(){
-        sidemenu.style.width = "200px"
-      }
-      function closemenu(){
-        sidemenu.style.width = "0px"
-      }
-    </script>
-
-    <!--        submition form            -->
-
-    <script>
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbxJ4Q8zCDxM2r2YHIH7zOKThCkbR5oM4nuxjImvFVekSocZtEaeMbvJQ6b55U9MZQ1H/exec'
-      const form = document.forms['submit-to-google-sheet']
-      const msg = document.getElementById('msg')
-
-      form.addEventListener('submit', e => {
-        e.preventDefault()
-        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-          .then(response =>{
-            msg.innerHTML = "Imformation sent to Siddharth Tiwari"
-            setTimeout(function(){
-              msg.innerHTML = " "
-            },1000)
-            form.reset()
-          })
-          .catch(error => console.error('Error!', error.message))
-      })
-    </script>
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-      <script>
-    var typed = new Typed('#element', {
-      strings: ['Web Designer !!' , 'UI/UX Designer !!' , ' Full Stack Developer !!' , 'Graphic Designer !!'],
-      typeSpeed: 50,
-    });
-  </script>
+<script src="script.js"></script>
   </body>
 </html>
