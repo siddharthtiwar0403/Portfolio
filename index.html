@@ -5,27 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Siddharth Tiwari Portfolio</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="https://kit.fontawesome.com/c4f7b243ea.js" crossorigin="anonymous"></script>
-        <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script
+      src="https://kit.fontawesome.com/c4f7b243ea.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
   </head>
   <body>
     <div id="header">
       <div class="container">
-        <nav class="nav1">
-          <!-- <img class="img1" src="logo.png" alt="" height="60px" width="150px"/> -->
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+        <nav class="nav1"> 
+          <i class="fas fa-bars" onclick="openmenu()"></i>
           <ul id="sidemenu">
             <li><a href="#header">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="#contact">Contact</a></li>
-            <i class="fas fa-solid fa-xmark" onclick="closemenu()"></i>
+            <i class="fas fa-xmark" onclick="closemenu()"></i>
           </ul>
-          <i class="fas fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
+        <div id="overlay" onclick="closemenu()"></div>
         <div class="header-text">
           <h1>Hii, I am <span class="span">Siddharth Tiwari</span></h1>
-             <h3><span id="element"></span></h3>
+          <h3><span id="element"></span></h3>
         </div>
       </div>
       <div class="header-image">
@@ -34,40 +39,45 @@
         </div>
       </div>
     </div>
-   <!--          about code            -->
+    <!--          about code            -->
     <div id="about">
       <div class="container">
         <div class="row">
           <div class="about-col-1">
-            <img  src="img.png"alt=""/>
+            <img src="img.png" alt="" />
           </div>
           <div class="about-col-2">
             <h1 class="sub-title">About Me<span class="underline"></span></h1>
             <p>
-              Hii my name is Siddharth Tiwari. I am a Computer Science student. I am a passionate web Developer and UI/UX Designer. I have also Experince in Java . I am a good problem solver and I am always ready to learn new things.
+              Hii my name is Siddharth Tiwari. I am a Computer Science student.
+              I am a passionate web Developer and UI/UX Designer. I have also
+              Experince in Java . I am a good problem solver and I am always
+              ready to learn new things.
             </p>
             <div class="tab-titles">
-              <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+              <p class="tab-links active-link" onclick="opentab('skills')">
+                Skills
+              </p>
               <p class="tab-links" onclick="opentab('Experince')">Experince</p>
-              <p class="tab-links" ondblclick="opentab('Education')">Education</p>
+              <p class="tab-links" ondblclick="opentab('Education')">
+                Education
+              </p>
             </div>
             <div class="tab-contents active-tab" id="skills">
               <ul>
-                <li><span>UI/UX </span><br>Designing Web/App Interfaces</li>
+                <li><span>UI/UX </span><br />Designing Web/App Interfaces</li>
                 <li>
-                  <span>Web Development</span><br>Designing Web/App Interfaces
+                  <span>Web Development</span><br />Designing Web/App Interfaces
                 </li>
                 <li>
-                  <span>App Development</span><br>Building Android/iOS apps
+                  <span>App Development</span><br />Building Android/iOS apps
                 </li>
               </ul>
             </div>
             <div class="tab-contents" id="Experince">
               <ul>
-                <li><span>UI/UX </span><br/>Figma Designing</li>
-                <li>
-                  <span>Web Development</span><br />Daily Dose News App
-                </li>
+                <li><span>UI/UX </span><br />Figma Designing</li>
+                <li><span>Web Development</span><br />Daily Dose News App</li>
                 <li>
                   <span>App Development</span><br />Blogging App and Chat App
                 </li>
@@ -75,12 +85,17 @@
             </div>
             <div class="tab-contents" id="Education">
               <ul>
-                <li><span>Rishikul Vidyapeeth Sonepat</span><br/> Matriculation (2018/2020)</li>
                 <li>
-                  <span>Rishikul Vidyapeeth Sonepat</span><br/>Class 12th (2020/2022)
+                  <span>Rishikul Vidyapeeth Sonepat</span><br />
+                  Matriculation (2018/2020)
                 </li>
                 <li>
-                  <span>Kalinga Institute of Industrial Technology</span><br>Bachelor of Technology in Computer Science (2023/2027) 
+                  <span>Rishikul Vidyapeeth Sonepat</span><br />Class 12th
+                  (2020/2022)
+                </li>
+                <li>
+                  <span>Kalinga Institute of Industrial Technology</span
+                  ><br />Bachelor of Technology in Computer Science (2023/2027)
                 </li>
               </ul>
             </div>
@@ -91,114 +106,188 @@
 
     <!--        services           -->
     <div id="services">
-        <div class="container">
-            <h1 class="sub-title">My Services <span class="underline"></span></h1>
-            <div class="services-list">
-                <div>
-                  <i class="fa-solid fa-code"></i>
-                    <h2>Web Design</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam, aperiam!</p>
-                    <a href="#">Learn More</a>
-                </div>
-                <div>
-                  <i class="fa-solid fa-code"></i>
-                    <h2>Web Design</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam, aperiam!</p>
-                    <a href="#">Learn More</a>
-                </div>
-                <div>
-                  <i class="fa-solid fa-crop-simple"></i>
-                    <h2>UI/UX Design</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam, aperiam!</p>
-                    <a href="#">Learn More</a>
-                </div>
-                <div>
-                  <i class="fa-solid fa-rocket"></i>
-                    <h2>App Design</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam, aperiam!</p>
-                    <a href="#">Learn More</a>
-                </div>
-            </div>
+      <div class="container">
+        <h1 class="sub-title">My Services <span class="underline"></span></h1>
+        <div class="services-list">
+          <div>
+            <i class="fa-solid fa-code"></i>
+            <h2>Web Design</h2>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam,
+              aperiam!
+            </p>
+            <a href="#">Learn More</a>
+          </div>
+          <div>
+            <i class="fa-solid fa-code"></i>
+            <h2>Web Design</h2>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam,
+              aperiam!
+            </p>
+            <a href="#">Learn More</a>
+          </div>
+          <div>
+            <i class="fa-solid fa-crop-simple"></i>
+            <h2>UI/UX Design</h2>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam,
+              aperiam!
+            </p>
+            <a href="#">Learn More</a>
+          </div>
+          <div>
+            <i class="fa-solid fa-rocket"></i>
+            <h2>App Design</h2>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam,
+              aperiam!
+            </p>
+            <a href="#">Learn More</a>
+          </div>
         </div>
+      </div>
     </div>
 
-    <!--            Portfolio   My Work          -->
-          <div id="portfolio">
-            <div class="container">
-              <h1 class="sub-title">My Work <span class="underline"></span></h1>
-              <div class="work-list">
-                <div class="work">
-                  <img src="bg3.png" alt="" height="300px" width="250px">
-                  <div class="layer">
-                    <h3>Daily Dose News App</h3>
-                    <p>This App Gives You the Lates <br> News From All Over the World</p>
-                    <a href="#"><i class="fa-solid fa-link"></i></a>
-                  </div>
-                </div>
-                <div class="work">
-                  <img src="bg4.png" alt="" height="300px" width="250px">
-                  <div class="layer">
-                    <h3>Daily Dose News App</h3>
-                    <p>This App Gives You the Lates <br> News From All Over the World</p>
-                    <a href="#"><i class="fa-solid fa-link"></i></a>
-                  </div>
-                </div>
-                <div class="work">
-                  <img src="bg2.png" alt="" height="300px" width="250px">
-                  <div class="layer">
-                    <h3>Blogging App</h3>
-                    <p>This App Gives You the Lates <br> News From All Over the World</p>
-                    <a href="#"><i class="fa-solid fa-link"></i></a>
-                  </div>
-                </div>
-                <div class="work">
-                  <img src="bg5.png" alt="" height="300px" width="250px">
-                  <div class="layer">
-                    <h3>Chat App</h3>
-                    <p>This App Gives You the Lates <br> News From All Over the World</p>
-                    <a href="#"><i class="fa-solid fa-link"></i></a>
-                  </div>
-                </div>
-              </div>
-              <a href="https://github.com/siddharthtiwar0403" target="/" class="btn btn3 btn2">See More</a>
-            </div>
-          </div>      
-
-          <!--         contact      -->
-
-          <div id="contact">
-            <div class="container">
-              <div class="row">
-                <div class="contact-left">
-                  <h1 class="sub-title">Contact Me <span class="underline"></span></h1>
-                  <p><i class="fa-solid fa-paper-plane"></i> 2329155@kiit.ac.in</p>
-                  <p><i class="fa-solid fa-phone-volume"></i> 9013990990</p>
-                  <p><i class="fa-solid fa-phone-volume"></i> 8447045380</p>
-                  <div class="social-icons">
-                    <a href="https://www.linkedin.com/in/siddharthtiwari0403" target="/"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://github.com/siddharthtiwar0403" target="/"><i class="fa-brands fa-square-github"></i></a>
-                    <a href="https://www.facebook.com/siddharth.tiwari.90038882/"target="/"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://www.instagram.com/siddharthtiwari0403/"target="/"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                  </div>
-                  <a href="Siddharth_Tiwari_Resume.pdf" download="" class="btn btn2">Download Resume</a>
-                </div>
-                <div class="contact-right">
-                  <form name="submit-to-google-sheet" onsubmit="return false;">
-                    <input class="form" type="text" name="Name" placeholder="Your Name" required>
-                    <input class="form" type="number" name ="phone" placeholder="Phone No" required>
-                    <input class="form" type="email" name="Email" placeholder="Your Email" required>
-                    <textarea class="form" name="Message" rows="10" placeholder="Your Meassage" id=""></textarea>
-                    <button type="submit" class="btn btn2 btn3">Submit</button>
-                  </form>
-                  <span id="msg"></span>
-                </div>
-              </div>
-            </div>
-            <div class="copyright">
-              <p>Copyright @ Siddharth. Made by <i class="fa-solid fa-s"></i>iddharth <i class="fa-solid fa-t"></i>iwari</p>
+    <!--           My Work          -->
+    <div id="portfolio">
+      <div class="container">
+        <h1 class="sub-title">My Work <span class="underline"></span></h1>
+        <div class="work-list">
+          <div class="work">
+            <img src="bg3.png" alt="" height="300px" width="250px" />
+            <div class="layer">
+              <h3>Daily Dose News App</h3>
+              <p>
+                This App Gives You the Lates <br />
+                News From All Over the World
+              </p>
+              <a href="#"><i class="fa-solid fa-link"></i></a>
             </div>
           </div>
-          <script src="script.js"></script>
+          <div class="work">
+            <img src="bg4.png" alt="" height="300px" width="250px" />
+            <div class="layer">
+              <h3>Daily Dose News App</h3>
+              <p>
+                This App Gives You the Lates <br />
+                News From All Over the World
+              </p>
+              <a href="#"><i class="fa-solid fa-link"></i></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="bg2.png" alt="" height="300px" width="250px" />
+            <div class="layer">
+              <h3>Blogging App</h3>
+              <p>
+                This App Gives You the Lates <br />
+                News From All Over the World
+              </p>
+              <a href="#"><i class="fa-solid fa-link"></i></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="bg5.png" alt="" height="300px" width="250px" />
+            <div class="layer">
+              <h3>Chat App</h3>
+              <p>
+                This App Gives You the Lates <br />
+                News From All Over the World
+              </p>
+              <a href="#"><i class="fa-solid fa-link"></i></a>
+            </div>
+          </div>
+        </div>
+        <a
+          href="https://github.com/siddharthtiwar0403"
+          target="/"
+          class="btn btn3 btn2"
+          >See More</a
+        >
+      </div>
+    </div>
+
+    <!--         contact      -->
+
+    <div id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="sub-title">
+              Contact Me <span class="underline"></span>
+            </h1>
+            <p><i class="fa-solid fa-paper-plane"></i> 2329155@kiit.ac.in</p>
+            <p><i class="fa-solid fa-phone-volume"></i> 9013990990</p>
+            <p><i class="fa-solid fa-phone-volume"></i> 8447045380</p>
+            <div class="social-icons">
+              <a
+                href="https://www.linkedin.com/in/siddharthtiwari0403"
+                target="/"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+              <a href="https://github.com/siddharthtiwar0403" target="/"
+                ><i class="fa-brands fa-square-github"></i
+              ></a>
+              <a
+                href="https://www.facebook.com/siddharth.tiwari.90038882/"
+                target="/"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/siddharthtiwari0403/"
+                target="/"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+            <a href="Siddharth_Tiwari_Resume.pdf" download="" class="btn btn2"
+              >Download Resume</a
+            >
+          </div>
+          <div class="contact-right">
+            <form name="submit-to-google-sheet" onsubmit="return false;">
+              <input
+                class="form"
+                type="text"
+                name="Name"
+                placeholder="Your Name"
+                required
+              />
+              <input
+                class="form"
+                type="number"
+                name="phone"
+                placeholder="Phone No"
+                required
+              />
+              <input
+                class="form"
+                type="email"
+                name="Email"
+                placeholder="Your Email"
+                required
+              />
+              <textarea
+                class="form"
+                name="Message"
+                rows="10"
+                placeholder="Your Meassage"
+                id=""
+              ></textarea>
+              <button type="submit" class="btn btn2 btn3">Submit</button>
+            </form>
+            <span id="msg"></span>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>
+          Copyright @ Siddharth. Made by <i class="fa-solid fa-s"></i>iddharth
+          <i class="fa-solid fa-t"></i>iwari
+        </p>
+      </div>
+    </div>
+    <script src="script.js"></script>
   </body>
 </html>
