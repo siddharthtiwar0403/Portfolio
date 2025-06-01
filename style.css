@@ -1,17 +1,20 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     box-sizing: border-box;
 }
-html{
+
+html {
     scroll-behavior: smooth;
 }
-body{
+
+body {
     background-color: #000000;
     color: #fff;
 }
-#header{
+
+#header {
     width: 100%;
     height: 100vh;
     background-image: url(bg1.png);
@@ -20,28 +23,42 @@ body{
     background-position: left;
 }
 
-.container{
+.container {
     padding: 10px 7%;
 }
-nav{
+
+nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
 }
-nav ul li{
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+nav i {
+    display: none;
+}
+
+nav ul li {
     display: inline-block;
     list-style: none;
-    margin: 15px 20px ;
+    margin: 15px 20px;
 }
-nav ul li a{
+
+nav ul li a {
     border-radius: 5px;
     color: red;
     text-decoration: none;
     font-size: 25px;
     position: relative;
 }
-nav ul li a::after{
+
+nav ul li a::after {
     content: '';
     width: 0;
     height: 5px;
@@ -51,55 +68,73 @@ nav ul li a::after{
     bottom: -6px;
     transition: 0.6s;
 }
-nav ul li a:hover::after{
+
+nav ul li a:hover::after {
     width: 100%;
 }
-.header-text h1{
-    font-size: 50px; 
+    #overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; 
+  height: 100vh;
+  z-index: 998; /* Just behind sidemenu */
+}
+
+.header-text h1 {
+    font-size: 50px;
     margin-top: 150px;
     color: black;
 }
-.header-text h3{
+
+.header-text h3 {
     margin-top: 20px;
-    font-size: 40px; 
+    font-size: 40px;
     color: rgb(0, 0, 0);
 }
-.header-text h1 span{
+
+.header-text h1 span {
     color: red;
 }
-.coder img{
+
+.coder img {
     border-radius: 30px;
     margin-left: 850px;
     position: absolute;
     bottom: 100px;
 }
 
-   /*                  about           */
+/*                  about           */
 
-#about{
+#about {
     padding: 80px o;
     color: #ababab;
 }
-.row{
+
+.row {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.about-col-1 img{
+
+.about-col-1 img {
     margin-top: 40px;
     width: 100%;
     height: 350px;
     width: 300px;
     border-radius: 10px;
 }
-.about-col-1 img:hover{
+
+.about-col-1 img:hover {
     transition: 0.5s;
-     transform: scale(1.15);
+    transform: scale(1.15);
 }
-.about-col-2{
+
+.about-col-2 {
     margin-top: 30px;
     flex-basis: 60%;
 }
+
 .sub-title {
     position: relative;
     display: inline-block;
@@ -108,9 +143,9 @@ nav ul li a:hover::after{
     color: red;
     cursor: pointer;
 
-  }
-  
-  .sub-title .underline {
+}
+
+.sub-title .underline {
     margin-bottom: 15px;
     position: absolute;
     bottom: -12px;
@@ -119,23 +154,26 @@ nav ul li a:hover::after{
     width: 0;
     background-color: #ff0000;
     transition: width 0.5s ease;
-  }
-  .sub-title:hover .underline {
+}
+
+.sub-title:hover .underline {
     width: 100%;
-  }
-  
-.tab-titles{
+}
+
+.tab-titles {
     display: flex;
     margin: 20px 0 40px;
 }
-.tab-links{
+
+.tab-links {
     margin-right: 50px;
     font-size: 18px;
     font-weight: 500;
     cursor: pointer;
     position: relative;
 }
-.tab-links::after{
+
+.tab-links::after {
     content: '';
     width: 0;
     height: 3px;
@@ -145,84 +183,97 @@ nav ul li a:hover::after{
     bottom: -8px;
     transition: 0.4s;
 }
-.tab-links.active-link::after{
+
+.tab-links.active-link::after {
     width: 50%;
 }
-.tab-contents ul li{
+
+.tab-contents ul li {
     list-style: none;
     margin: 10px 0px;
 }
-.tab-contents ul li span{
+
+.tab-contents ul li span {
     color: red;
     font-size: 14px;
 }
-.tab-contents{
+
+.tab-contents {
     display: none;
     font-size: large;
 }
-.tab-contents.active-tab{
-display: block;
+
+.tab-contents.active-tab {
+    display: block;
 }
 
 /*                  My services              */
 
-.services-list{
+.services-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 40px;
     margin-top: 40px;
 }
-.services-list div{
+
+.services-list div {
     background: #262626;
     padding: 40px;
     font-size: 13px;
     font-weight: 300;
     border-radius: 10px;
-    transition: background 0.5s , transform 0.5s;
+    transition: background 0.5s, transform 0.5s;
 }
+
 .services-list div i {
     font-size: 40px;
     margin: 10px;
 }
-.services-listdiv h2{
+
+.services-listdiv h2 {
     margin-top: 10px;
     font-size: 30px;
     font-weight: 500;
     margin-bottom: 15px;
 }
-.services-list div a{
+
+.services-list div a {
     text-decoration: none;
     color: #fff;
     font-size: 12px;
     margin-top: 20px;
     display: inline-block;
 }
-.services-list div:hover{
+
+.services-list div:hover {
     background: red;
     transition: .5s;
     transform: translateY(-25px);
 }
 
-/*                 portfolio My work            */ 
+/*                 portfolio My work            */
 
-#portfolio{
+#portfolio {
     padding: 50px 0;
 }
-.work-list{
+
+.work-list {
     display: grid;
     /* height: 40px; */
-    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
-    grid-gap:40px ;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 40px;
     margin-top: 30px;
 }
-.work{
-    border-radius: 15px ;
+
+.work {
+    border-radius: 15px;
     position: relative;
     border-radius: 15px;
     width: 100%;
     overflow: hidden;
     aspect-ratio: 4/4.5;
 }
+
 .work img {
     width: 100%;
     height: 100%;
@@ -230,6 +281,7 @@ display: block;
     display: block;
     transition: transform 0.5s;
 }
+
 .layer {
     position: absolute;
     top: 0;
@@ -247,15 +299,17 @@ display: block;
     text-align: center;
     font-size: 14px;
     transition: height 0.5s ease;
-    
+
 }
-.layer h3{
+
+.layer h3 {
     margin-top: 20px;
     font-weight: 500;
     margin-bottom: 20px;
     margin-right: 20px;
 }
-.layer a{
+
+.layer a {
     margin-top: 20px;
     /* margin-left: 10px; */
     color: white;
@@ -264,66 +318,78 @@ display: block;
     line-height: 60px;
 
 }
-.work:hover img{
+
+.work:hover img {
     transform: scale(1.2);
 }
-.work:hover .layer{
+
+.work:hover .layer {
     height: 100%;
     transition: 0.5s;
 }
-.btn{
+
+.btn {
     color: white;
-margin-top: 10px;
-font-size: 18px; 
-display: inline-block; 
-padding: 0.6em 1.2em; 
-border: 3px solid red; 
-border-radius: 10px; 
-position: relative; 
-color: red; 
-text-decoration: none; 
-transition: 0.8s;
-z-index: 1;
+    margin-top: 10px;
+    font-size: 18px;
+    display: inline-block;
+    padding: 0.6em 1.2em;
+    border: 3px solid red;
+    border-radius: 10px;
+    position: relative;
+    color: red;
+    text-decoration: none;
+    transition: 0.8s;
+    z-index: 1;
 }
-.btn:before { 
-transition: 0.8s; 
-position: absolute; 
-top: 0; 
-left: 50%; 
-right: 50%; 
-bottom: 0; 
-opacity: 0; 
-content:""; 
-background-color:red; 
-z-index: -1; 
+
+.btn:before {
+    transition: 0.8s;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    background-color: red;
+    z-index: -1;
 }
-.btn:hover, btn:focus {
-color: white; 
+
+.btn:hover,
+btn:focus {
+    color: white;
 }
-.btn:hover:before, .btn:focus:before { 
-transition: 0.8; 
-left: 0; 
-right: 0; 
-opacity: 1;
+
+.btn:hover:before,
+.btn:focus:before {
+    transition: 0.8;
+    left: 0;
+    right: 0;
+    opacity: 1;
 }
 
 /*        contact       */
 
-.contact-left{
-flex-basis: 35%;
+.contact-left {
+    flex-basis: 35%;
 }
-.contact-right{
+
+.contact-right {
     flex-basis: 45%;
 }
-.contact-left p{
+
+.contact-left p {
     margin-top: 30px;
 }
-.contact-left p i{
+
+.contact-left p i {
     color: red;
-    margin-right: 15px ;
+    margin-right: 15px;
     font-size: 25px;
 }
-.social-icons a{
+
+.social-icons a {
     text-decoration: none;
     font-size: 30px;
     color: #ababab;
@@ -331,31 +397,36 @@ flex-basis: 35%;
     margin: 15px 0px 0px 15px;
     transition: 0.5s;
 }
-.social-icons a:hover{
+
+.social-icons a:hover {
     color: red;
     transform: translateY(-15px);
 }
 
 /*             resume           */
 
-.social-icons a .btn.btn2 btn3{
+.social-icons a .btn.btn2 btn3 {
     margin-top: 8px;
     display: inline-block;
 }
-.btn.btn2{
+
+.btn.btn2 {
     background-color: #000000;
     margin-top: 8px;
     display: inline-block;
 }
-.btn.btn2:hover{
+
+.btn.btn2:hover {
     background-color: red;
     border: 8px soid blue;
 }
 
-.contact-right form{
+.contact-right form {
     width: 100%;
 }
-form input, form textarea{
+
+form input,
+form textarea {
     width: 100%;
     border: 0;
     outline: none;
@@ -366,11 +437,13 @@ form input, form textarea{
     font-size: 18px;
     border-radius: 15px;
 }
-.contact-right .form:hover{
+
+.contact-right .form:hover {
     transition: 0.4s ease-in-out;
-    box-shadow:  5px 3px 3px red ;
+    box-shadow: 5px 3px 3px red;
 }
-.copyright{
+
+.copyright {
     width: 100%;
     text-align: center;
     padding: 25px 0;
@@ -378,93 +451,143 @@ form input, form textarea{
     font-weight: 300;
     margin-top: 20px;
 }
-.copyright i{
+
+.copyright i {
     color: red;
 }
 
 
 /*           css for small screen            */
 
-nav .fas{
+nav .fas {
     display: none;
 }
+
 @media only screen and (max-width: 600px) {
-    #header{
+    #header {
         background-image: url(bg1.png);
         height: 700px;
         width: 100%;
     }
-    .header-text{
+
+    .header-text {
         margin-top: 50%;
         font-size: 16px;
     }
-    .header-text h1{
+
+    .header-text h1 {
         font-size: 30px;
-        
+
     }
-    .header-text h3{
+
+    .header-text h3 {
         font-size: 30px;
         /* margin-bottom: 100px; */
     }
-    nav .fas{
+
+    nav .fas {
         display: block;
         font-size: 25px;
     }
-    nav ul{
-        background: #ff004f;
-        position: fixed;
-        top: 0;
-        right: -200px;
-        width: 200px;
-        height: 100vh;
-        padding: 50px;
-        z-index: 2;
-        transition: right 0.6s;
+
+    .fa-bars{
+        color: black;
+        font-size: 50px;
     }
-     .work-list {
-    grid-template-columns: 1fr;
+ nav ul {
+    flex-direction: column;
+    position: fixed;
+    top: -100vh;
+    left: 0;
+    background: black;
+    width: 100%;
+    height: 50vh;
+    padding-top: 100px;
+    transition: top 0.5s ease, opacity 0.5s ease;
+    opacity: 0;
+    z-index: 999;
   }
-    nav ul li{
-        display: block;
-        margin: 25px;
+  nav ul li {
+    margin: 7px 0;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+    transition: all 0.6s ease;
+  }
+  nav ul li:nth-child(1) { transition-delay: 0.2s; }
+  nav ul li:nth-child(2) { transition-delay: 0.4s; }
+  nav ul li:nth-child(3) { transition-delay: 0.6s; }
+  nav ul li:nth-child(4) { transition-delay: 0.8s; }
+  nav ul li:nth-child(5) { transition-delay: 1s; }
+  nav i {
+    display: block;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    font-size: 25px;
+    z-index: 1001;
+    cursor: pointer;
+  }
+    #sidemenu.show {
+        top: 0;
+        opacity: 1;
     }
-    nav ul .fas{
+     #sidemenu.show li {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+    .work-list {
+        grid-template-columns: 1fr;
+    }
+
+    nav ul .fas {
         position: absolute;
         top: 25px;
         left: 25px;
         cursor: pointer;
     }
-    .sub-title{
+
+    .sub-title {
         font-size: 30px;
     }
-    .about-col-1 , .about-col-2{
+
+    .about-col-1,
+    .about-col-2 {
         flex-basis: 100%;
         margin-top: 30px;
     }
-    .about-col-2{
+
+    .about-col-2 {
         font-size: 14px;
     }
-    .btn.btn2{
-    background-color: #000000;
-    margin-top: 8px;
-    display: inline-block;
-}
-.btn.btn2:hover{
-    background-color: red;
-    border: 8px soid blue;
-}
-    .tab-links{
+
+    .btn.btn2 {
+        background-color: #000000;
+        margin-top: 8px;
+        display: inline-block;
+    }
+
+    .btn.btn2:hover {
+        background-color: red;
+        border: 8px soid blue;
+    }
+
+    .tab-links {
         font-size: 16px;
         /* margin-right: 20px; */
     }
-    .contact-left , .contact-right{
+
+    .contact-left,
+    .contact-right {
         flex-basis: 100%;
     }
-    .copyright{
+
+    .copyright {
         font-size: 14px;
     }
 }
-#msg{
+
+#msg {
     color: #61b752;
     margin-top: -40px;
 }
