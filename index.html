@@ -15,8 +15,11 @@
     <div id="header">
       <div class="container">
         <!-- Font Awesome -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-        <nav class="nav1"> 
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <nav class="nav1">
           <i class="fas fa-bars" onclick="openmenu()"></i>
           <ul id="sidemenu">
             <li><a href="#header">Home</a></li>
@@ -150,64 +153,83 @@
     </div>
 
     <!--           My Work          -->
-    <div id="portfolio">
-      <div class="container">
-        <h1 class="sub-title">My Work <span class="underline"></span></h1>
-        <div class="work-list">
+    <div href="#portfolio" id="portfolio">
+      <h1 class="sub-title"><span class="underline"></span>My Work</h1>
+      <div class="portfolio-wrapper">
+        <button class="scroll-btn left" onclick="scrollRightBtn()">
+          &#10094;
+        </button>
+        <div class="work-list" id="workList">
           <div class="work">
-            <img src="bg3.png" alt="" height="300px" width="250px" />
+            <img src="bg3.png" alt="Portfolio" />
             <div class="layer">
-              <h3>Daily Dose News App</h3>
-              <p>
-                This App Gives You the Lates <br />
-                News From All Over the World
-              </p>
+              <h3>Portfolio Site</h3>
+              <p>Showcase your work beautifully</p>
               <a href="#"><i class="fa-solid fa-link"></i></a>
             </div>
           </div>
           <div class="work">
-            <img src="bg4.png" alt="" height="300px" width="250px" />
-            <div class="layer">
-              <h3>Daily Dose News App</h3>
-              <p>
-                This App Gives You the Lates <br />
-                News From All Over the World
-              </p>
-              <a href="#"><i class="fa-solid fa-link"></i></a>
-            </div>
-          </div>
-          <div class="work">
-            <img src="bg2.png" alt="" height="300px" width="250px" />
+            <img src="bg1.png" alt="Blogging" />
             <div class="layer">
               <h3>Blogging App</h3>
-              <p>
-                This App Gives You the Lates <br />
-                News From All Over the World
-              </p>
+              <p>Write and share ideas instantly</p>
               <a href="#"><i class="fa-solid fa-link"></i></a>
             </div>
           </div>
           <div class="work">
-            <img src="bg5.png" alt="" height="300px" width="250px" />
+            <img src="bg6.png" alt="Tech" />
+            <div class="layer">
+              <h3>News App</h3>
+              <p>Latest global news in one place</p>
+              <a href="#"><i class="fa-solid fa-link"></i></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="bg5.png" alt="Blogging" />
+            <div class="layer">
+              <h3>Blogging App</h3>
+              <p>Write and share ideas instantly</p>
+              <a href="#"><i class="fa-solid fa-link"></i></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="bg4.png" alt="Chat" />
             <div class="layer">
               <h3>Chat App</h3>
-              <p>
-                This App Gives You the Lates <br />
-                News From All Over the World
-              </p>
+              <p>Stay connected with everyone</p>
+              <a href="#"><i class="fa-solid fa-link"></i></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="bg6.png" alt="Tech" />
+            <div class="layer">
+              <h3>News App</h3>
+              <p>Latest global news in one place</p>
+              <a href="#"><i class="fa-solid fa-link"></i></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="bg3.png" alt="Portfolio" />
+            <div class="layer">
+              <h3>Portfolio Site</h3>
+              <p>Showcase your work beautifully</p>
+              <a href="#"><i class="fa-solid fa-link"></i></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="bg2.png" alt="Ecommerce" />
+            <div class="layer">
+              <h3>E-commerce</h3>
+              <p>Sell products with ease</p>
               <a href="#"><i class="fa-solid fa-link"></i></a>
             </div>
           </div>
         </div>
-        <a
-          href="https://github.com/siddharthtiwar0403"
-          target="/"
-          class="btn btn3 btn2"
-          >See More</a
-        >
+        <button class="scroll-btn right" onclick="scrollLeftBtn()">
+          &#10095;
+        </button>
       </div>
     </div>
-
     <!--         contact      -->
 
     <div id="contact">
@@ -221,10 +243,7 @@
             <p><i class="fa-solid fa-phone-volume"></i> 9013990990</p>
             <p><i class="fa-solid fa-phone-volume"></i> 8447045380</p>
             <div class="social-icons">
-              <a
-                href="https://www.linkedin.com/in/siddharthtiwari0403"
-                target="/"
-                ><i class="fa-brands fa-linkedin"></i
+              <a href="https://www.linkedin.com/in/siddharthtiwari0403" target="/"><i class="fa-brands fa-linkedin"></i
               ></a>
               <a href="https://github.com/siddharthtiwar0403" target="/"
                 ><i class="fa-brands fa-square-github"></i
@@ -241,9 +260,7 @@
               ></a>
               <a href="#"><i class="fa-brands fa-twitter"></i></a>
             </div>
-            <a href="Siddharth_Tiwari_Resume.pdf" download="" class="btn btn2"
-              >Download Resume</a
-            >
+            <a href="Siddharth_Tiwari_Resume.pdf" download="" class="btn btn2 btn1 btn3">DownloadResume</a>
           </div>
           <div class="contact-right">
             <form name="submit-to-google-sheet" onsubmit="return false;">
