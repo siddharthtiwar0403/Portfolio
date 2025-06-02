@@ -49,3 +49,30 @@ var typed = new Typed("#element", {
   ],
   typeSpeed: 50,
 });
+
+// my work section
+  const workList = document.getElementById("workList");
+  const scrollAmount = document.querySelector(".work").offsetWidth + 40;
+
+  function scrollLeftBtn() {
+    workList.style.transition = 'transform 0.5s ease-in-out';
+    workList.style.transform = `translateX(-${scrollAmount}px)`;
+    setTimeout(() => {
+      const first = workList.firstElementChild;
+      workList.appendChild(first);
+      workList.style.transition = 'none';
+      workList.style.transform = 'translateX(0)';
+    }, 500);
+  }
+
+  function scrollRightBtn() {
+    const last = workList.lastElementChild;
+    workList.insertBefore(last, workList.firstElementChild);
+    workList.style.transition = 'none';
+    workList.style.transform = `translateX(-${scrollAmount}px)`;
+    setTimeout(() => {
+      workList.style.transition = 'transform 0.5s ease-in-out';
+      workList.style.transform = 'translateX(0)';
+    }, 10);
+  }
+  setInterval(scrollLeftBtn, 3000);
